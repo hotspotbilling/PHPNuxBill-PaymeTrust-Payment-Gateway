@@ -91,7 +91,7 @@ function paymetrust_create_transaction($trx, $user)
     $json = [
         'currency' => $cur,
         //'payment_method' => $method,
-        'merchant_transaction_id' => $trx['id'],
+        'merchant_transaction_id' => 'PT_'.$trx['id'],
         'amount' => strval($trx['price']),
         'lang' => $lang,
         'designation' => $trx['plan_name'],
