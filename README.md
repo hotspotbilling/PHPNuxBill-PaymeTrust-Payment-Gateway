@@ -2,7 +2,7 @@
 
 Payment Gateway [PaymeTrust](https://PaymeTrust.net) for PHPNuxBill
 
-[Download](https://github.com/hotspotbilling/phpnuxbill-paypal/archive/refs/heads/main.zip)
+[Download](https://github.com/hotspotbilling/phpnuxbill-paymetrust/archive/refs/heads/main.zip)
 
 ## Installation
 
