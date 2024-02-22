@@ -69,21 +69,26 @@ function paymetrust_save_config()
         $d->value = implode(',', $_POST['paymetrust_currencys']);
         $d->save();
     }
-    _log('[' . $admin['username'] . ']: PaymeTrust ' . $_L['Settings_Saved_Successfully'], 'Admin', $admin['id']);
+    _log('[' . $admin['username'] . ']: PaymeTrust ' . Lang::T('Settings_Saved_Successfully'), 'Admin', $admin['id']);
 
-    r2(U . 'paymentgateway/paymetrust', 's', $_L['Settings_Saved_Successfully']);
+    r2(U . 'paymentgateway/paymetrust', 's', Lang::T('Settings_Saved_Successfully'));
 }
 
 function paymetrust_create_transaction($trx, $user)
 {
     global $ui, $routes, $config;
-    if (!in_array($routes[4], paymetrust_get_currency())) {
-        $ui->assign('_title', 'PaymeTrust');
-        $ui->assign("show", "channels");
-        $ui->assign("currs", explode(',', $config['paymetrust_currencys']));
-        $ui->assign('path', $routes[2] . '/' . $routes[3]);
-        $ui->display('paymetrust.tpl');
-        die();
+    $curss = explode(',', $config['paymetrust_currencys']);
+    if(count($curss)>1){
+        if (!in_array($routes[4], paymetrust_get_currency())) {
+            $ui->assign('_title', 'PaymeTrust');
+            $ui->assign("show", "channels");
+            $ui->assign("currs", $curss);
+            $ui->assign('path', $routes[2] . '/' . $routes[3]);
+            $ui->display('paymetrust.tpl');
+            die();
+        }
+    }else{
+        $routes[4] = $curss[0];
     }
     $lang = ($routes[5]) ? $routes[5] : 'fr';
     $cur = ($routes[4]) ? $routes[4] : 'XOF';

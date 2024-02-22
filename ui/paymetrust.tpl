@@ -44,7 +44,7 @@
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
                                 <button class="btn btn-primary waves-effect waves-light"
-                                    type="submit">{$_L['Save']}</button>
+                                    type="submit">{Lang::T('Save')}</button>
                             </div>
                         </div>
                         <pre>/ip hotspot walled-garden
@@ -62,7 +62,6 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="panel panel-info panel-hovered">
-                <div class="panel-heading">France</div>
                 <div class="panel-body">
                     <div class="btn-group btn-group-justified" role="group" aria-label="...">
                         {foreach $currs as $c}
@@ -72,19 +71,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="panel panel-warning panel-hovered">
-                <div class="panel-heading">English</div>
-                <div class="panel-body">
-                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
-                        {foreach $currs as $c}
-                            <a href="{$_url}order/buy/{$path}/{$c}/en" onclick="return confirm('{$c}?')"
-                                class="btn btn-block btn-primary">{$c}</a>
-                        {/foreach}
-                    </div>
-                </div>
-            </div>
-
         </div>
     {/if}
 {include file="sections/footer.tpl"}
