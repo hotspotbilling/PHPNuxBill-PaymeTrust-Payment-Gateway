@@ -44,14 +44,14 @@
                         <div class="form-group">
                             <div class="col-lg-offset-2 col-lg-10">
                                 <button class="btn btn-primary waves-effect waves-light"
-                                    type="submit">{Lang::T('Save')}</button>
+                                    type="submit">{Lang::T('Save Change')}</button>
                             </div>
                         </div>
                         <pre>/ip hotspot walled-garden
         add dst-host=paymetrust.net
         add dst-host=*.paymetrust.net</pre>
-                        <small id="emailHelp" class="form-text text-muted">Set Telegram Bot to get any error and
-                            notification</small>
+                        <small id="emailHelp" class="form-text text-muted">{Lang::T('Set Telegram Bot to get any error and
+                            notification')}</small>
                     </div>
                 </div>
 
