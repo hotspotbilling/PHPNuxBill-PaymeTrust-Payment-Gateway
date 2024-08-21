@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2 control-label">Url Callback Notification</label>
+                            <label class="col-md-2 control-label">{Lang::T('Url Callback Notification')}</label>
                             <div class="col-md-6">
                                 <input type="text" readonly class="form-control" onclick="this.select()"
                                     value="{$_url}callback/paymetrust">
@@ -31,7 +31,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-2 control-label">Currency</label>
+                            <label class="col-md-2 control-label">{Lang::T('Currency')}</label>
                             <div class="col-md-6">
                                 {foreach $currs as $c}
                                     <label class="checkbox-inline"><input type="checkbox"
